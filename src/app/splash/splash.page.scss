@@ -1,0 +1,94 @@
+ion-content {
+  --background: #0000CD;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+}
+
+.splash-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.splash-image {
+  width: 100px;
+  height: 100px;
+  opacity: 0;
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.initial-image {
+  animation: fadeOut 2s forwards;
+}
+
+.first-image {
+  margin-top: 20px;
+  animation: fadeZoomOut 2s forwards;
+  width: 215px;
+  height: 215px;
+}
+
+.second-image {
+  margin-top: -50px; 
+  opacity: 0;
+  animation: fadeUp 2s forwards;
+  width: 158.4px;
+  height: 37.7px;
+}
+
+.splash-text {
+  margin-top: 10px;
+  opacity: 0;
+  animation: fadeUpText 1s forwards; 
+  font-size: 18px;
+  color: #FFFFFF;
+  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeZoomOut {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(0.5);
+  }
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUpText {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

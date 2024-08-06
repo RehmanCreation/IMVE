@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Create New Task</ion-title>
+    <ion-buttons slot="end">
+      <button (click)="cancel()" class="close-button btn btn-outline-secondary">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="content-container">
+    <div class="container mt-4">
+      <div class="mb-3">
+        <label for="projectTitle" class="form-label custom-label">Project Title</label>
+        <input type="text" id="projectTitle" class="form-control custom-input" placeholder="Enter Task Title" [(ngModel)]="projectTitle" name="projectTitle">
+      </div>
+
+      <div class="mb-3">
+        <label for="description" class="form-label custom-label">Description</label>
+        <textarea id="description" class="form-control custom-input custom-textarea" placeholder="Enter Task Description" [(ngModel)]="description" name="description"></textarea>
+      </div>
+
+      <div class="mb-3">
+        <label for="assignedTo" class="form-label custom-label">Assigned To</label>
+        <select id="choices-multiple-remove-button" multiple class="form-select">
+          <option value="Rehman">Rehman</option>
+          <option value="Hassan">Hassan</option>
+          <option value="CSS">CSS</option>
+        </select>
+      </div>
+
+      <div class="button-container">
+        <button (click)="createTask()" class="btn btn-primary create-task-button">
+          Create Task
+        </button>
+      </div>
+    </div>
+  </div>
+</ion-content>

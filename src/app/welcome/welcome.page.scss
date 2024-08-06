@@ -1,0 +1,84 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+}
+
+.image-slider {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.image-slider img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  transition: opacity 0.6s ease-out;
+  position: absolute;
+}
+
+.circle-indicators {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.circle-indicators span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #E0E0E0;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.circle-indicators span.active {
+  background-color: #0000CD;
+}
+
+.content {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.content h1 {
+  margin: 10px 0;
+  font-size: 40px;
+  line-height: 48.41px;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+}
+
+.content p {
+  margin: 10px 0;
+  line-height: 18px;
+}
+
+#welcome-img {
+  width: 121px;
+  height: 29px;
+}
+
+.content .custom-button {
+  width: 295px;
+  height: 42px;
+  background-color: #0000cd;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  margin-top: 10px;
+}
+
+.content .custom-button:hover {
+  background-color: #0056b3;
+}

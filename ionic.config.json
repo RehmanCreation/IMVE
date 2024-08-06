@@ -1,0 +1,7 @@
+{
+  "name": "i-mve-offical",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

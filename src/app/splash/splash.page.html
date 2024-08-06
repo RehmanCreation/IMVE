@@ -1,0 +1,8 @@
+<ion-content [fullscreen]="true" class="splash-content">
+  <div class="splash-container">
+    <!-- <img [src]="initialImage" class="splash-image initial-image" *ngIf="showInitialImage"> -->
+    <img [src]="firstImage" class="splash-image first-image" *ngIf="showFirstImage">
+    <img [src]="secondImage" class="splash-image second-image" *ngIf="showSecondImage">
+    <p *ngIf="showText" class="splash-text">Less admin, more mves.</p>
+  </div>
+</ion-content>

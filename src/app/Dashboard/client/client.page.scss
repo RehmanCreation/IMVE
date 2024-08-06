@@ -1,0 +1,296 @@
+ion-toolbar {
+  --background: #F9F9F9;
+  --box-shadow: none !important;
+  --border-width: 0 !important;
+
+  ion-grid {
+    ion-row {
+      ion-col {
+        ion-avatar {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          img {
+            width: 50px;
+            height: 50px;
+          }
+        }
+        ion-text {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+          h2 {
+            margin: 0;
+            font-size: 16px;
+            font-family: 'Poppins';
+            color: #000000;
+          }
+          p {
+            margin: 0;
+            color: #505050;
+            font-family: 'Poppins';
+            font-size: 12px;
+          }
+        }
+      }
+      ion-button {
+        ion-icon {
+          font-size: 18px;
+          color: #000000;
+          margin-left: 40px;
+        }
+      }
+    }
+  }
+}
+
+.content-header {
+  padding: 16px;
+  padding-top: 0px;
+  ion-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    ion-col {
+      display: flex;
+      align-items: center;
+      
+      h1 {
+        font-size: 20px;
+        font-family: 'Poppins';
+        color: #000000;
+        margin: 0;
+        font-weight: 500;
+      }
+    }
+
+    .text-right {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      .add-task-button {
+        display: flex;
+        align-items: center;
+        ion-icon {
+          font-size: 16px;
+          --color: white;
+        }
+        font-size: 12px;
+        --background: #0000CD;
+        --color: #ffffff;
+        --padding-start: 12px;
+        text-transform: capitalize !important;
+        font-family: 'Poppins' !important;
+      }
+    }
+  }
+}
+
+.fixed-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: white;
+  padding: 10px 0;
+}
+
+.footer-toolbar {
+  ion-grid {
+    box-shadow: 0 0 5% rgba(0, 0, 0, 0.25);
+    background-color: white;
+    border-top-right-radius: 18px;
+    border-top-left-radius: 18px;
+    ion-row {
+      justify-content: center;
+      ion-col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        cursor: pointer;
+        ion-icon {
+          font-size: 24px;
+        }
+        p {
+          margin-top: 5px;
+          font-size: 12px;
+        }
+      }
+      .active-item {
+        ion-icon {
+          color: #0000cd;
+          font-weight: bold;
+        }
+        p {
+          color: #0000cd;
+        }
+      }
+    }
+  }
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.custom-search-bar {
+  --background: #f4f4f4; 
+
+  padding: 0 5px; 
+  --inner-border-width: 0; 
+  
+
+  ion-input {
+    --color: #333; 
+    --padding-start: 10px; 
+    --border-radius: 10px !important;
+  }
+
+  ion-icon {
+    --color: #0000CD; 
+    font-size: 1.5em; 
+    margin-left: 10px; 
+  }
+}
+.custom-search-bar::part(native) {
+  border-radius: 15px !important; 
+  overflow: hidden; 
+}
+ion-item.custom-search-bar {
+  border-radius: 10px !important; 
+}
+ion-item.custom-search-bar ion-icon {
+  --color: #0000CD; 
+  font-size: 15px; 
+  width: 15px; 
+  height: 15px; 
+  margin-left: 10px; 
+}
+
+ion-item.custom-search-bar ion-input::part(native)::placeholder {
+  --font-size: 11px !important;  
+  color: #bbb; 
+}
+
+
+
+
+.custom-card {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0px 0px 3px 0px #00000040;
+  position: relative;
+}
+
+.card-content-md {
+  padding-top: 2px !important;
+  padding-bottom: 2px !important;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 30px;
+}
+
+.left-content {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.card-title {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 120px;
+  color: black;
+  font-family: 'Poppins';
+  
+}
+
+.icon-group {
+  display: flex;
+  align-items: center;
+  margin-left: 8px;
+}
+
+.icon-group ion-icon {
+  font-size: 14px;
+  margin-left: 8px;
+}
+
+.right-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.right-content ion-icon {
+  font-size: 20px; 
+  color: black;
+}
+
+.dropdown-container {
+  position: absolute; 
+  top: 125px; 
+  right: 70px; 
+
+}
+
+.dropdown-menu {
+  background: white;
+  box-shadow: 0px 0px 1px 0px #00000040;
+  border-radius: 4px;
+  width: 60px;
+  z-index: 1000;
+  overflow: hidden;
+  border-radius: 4.5px;
+}
+
+.dropdown-menu button {
+  background: transparent;
+  border: none;
+  font-size: 12px;
+  padding: 10px 5px;
+  text-align: left;
+  width: 100%;
+  cursor: pointer;
+}
+
+.dropdown-menu button:hover {
+  background-color: #f0f0f0;
+}
+
+.view-btn {
+  color: #0000CD; 
+  font-family: 'Poppins';
+}
+
+.edit-btn {
+  color: #1BD4E5; 
+  font-family: 'Poppins';
+}
+
+.delete-btn {
+  color: #ED2424; 
+  font-family: 'Poppins';
+}
+
+.card-date {
+  margin-top: 2px;
+  font-size: 9px;
+  color: #5B5B5B;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  margin-top: -4px !important;
+}

@@ -1,0 +1,98 @@
+<ion-toolbar>
+  <ion-grid>
+    <ion-row class="ion-align-items-center">
+      <ion-col size="auto">
+        <ion-avatar>
+          <img src="assets/images/Ellipse 16.png" alt="Profile Picture">
+        </ion-avatar>
+      </ion-col>
+      <ion-col>
+        <ion-text>
+          <h2>Juli Isabella</h2>
+          <p>Admin</p>
+        </ion-text>
+      </ion-col>
+      <ion-col size="auto" class="ion-text-right">
+        <ion-button fill="clear">
+          <ion-icon slot="icon-only" src="assets/icon/Bell.svg"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-toolbar>
+<ion-content>
+  <div class="content-header">
+    <ion-row class="ion-align-items-center">
+      <ion-col>
+        <h1>Clients</h1>
+      </ion-col>
+      <ion-col size="auto" class="text-right">
+        <ion-button fill="solid" class="add-task-button">
+          <ion-icon slot="start"  src="assets/icon/bx-plus.svg"></ion-icon>
+          Add Client
+        </ion-button>
+      </ion-col>
+    </ion-row>
+
+    <!-- Full width search bar -->
+    <ion-item class="custom-search-bar">
+      <ion-input placeholder="Search..." type="text"></ion-input>
+      <ion-icon slot="end" src="assets/icon/search.svg"></ion-icon>
+    </ion-item>
+    
+    <!-- Client info card -->
+    <ion-card class="custom-card">
+      <ion-card-content>
+        <div class="card-header">
+          <div class="left-content">
+            <h2 class="card-title">Juli Isabella</h2>
+            <div class="icon-group">
+              <ion-icon name="mail-outline"></ion-icon>
+              <ion-icon name="call-outline"></ion-icon>
+            </div>
+          </div>
+          <div class="right-content">
+            <ion-icon name="ellipsis-horizontal" (click)="toggleDropdown()"></ion-icon>
+          </div>
+        </div>
+        <p class="card-date">Date created: 05-02-2024</p>
+      </ion-card-content>
+    </ion-card>
+    <div class="dropdown-container" *ngIf="isDropdownOpen">
+      <div class="dropdown-menu">
+        <button class="view-btn" (click)="view()">View</button>
+        <button class="edit-btn" (click)="edit()">Edit</button>
+        <button class="delete-btn" (click)="delete()">Delete</button>
+      </div>
+    </div>
+    </div>    
+    </ion-content>
+
+<ion-footer class="footer-custom">
+  <ion-toolbar class="footer-toolbar">
+    <ion-grid>
+      <ion-row class="ion-align-items-center ion-justify-content-between">
+        <ion-col size="2" class="ion-text-center" (click)="navigateTo('home')">
+          <ion-icon src="assets/icon/bx-home.svg"></ion-icon>
+          <p>Home</p>
+        </ion-col>
+        <ion-col size="2" class="ion-text-center" [ngClass]="{'active-item': isHomeActive}">
+          <ion-icon src="assets/icon/users-group.svg"></ion-icon>
+          <p>Client</p>
+        </ion-col>
+        <ion-col size="2" class="ion-text-center">
+          <ion-icon src="assets/icon/calendar 2.svg"></ion-icon>
+          <p>Calendar</p>
+        </ion-col>
+        <ion-col size="2" class="ion-text-center">
+          <ion-icon src="assets/icon/credit-card.svg"></ion-icon>
+          <p>Payment</p>
+        </ion-col>
+        <ion-col size="2" class="ion-text-center">
+          <ion-icon src="assets/icon/bx-user-circle.svg"></ion-icon>
+          <p>Profile</p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-footer>

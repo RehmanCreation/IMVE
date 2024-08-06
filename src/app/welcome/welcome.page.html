@@ -1,0 +1,16 @@
+<ion-content>
+  <div class="container">
+    <div class="image-slider">
+      <img [src]="currentImage" alt="Banner Image">
+    </div>
+    <div class="circle-indicators">
+      <span *ngFor="let image of images; let i = index" [class.active]="i === currentIndex" (click)="goToSlide(i)"></span>
+    </div>
+    <div class="content">
+      <h1>Welcome to</h1>
+      <img src="assets/images/Group.png" id="welcome-img" alt="Your Image">
+      <p>A new generation of removals & storage <br> designed to take companies to<br> next level</p>
+      <button class="custom-button" (click)="navigateToSignIn()">Get Started</button>
+    </div>
+  </div>
+</ion-content>

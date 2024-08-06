@@ -1,0 +1,34 @@
+<ion-content>
+  <div class="sign-in-container">
+    <!-- Logo Image -->
+    <img src="assets/images/Group 43.png" alt="Logo" class="logo">
+
+    <form (ngSubmit)="login()" #signInForm="ngForm">
+      <div class="custom-input">
+        <label>
+          <img src="assets/images/Letter.png" alt="Email Icon" class="icon">
+          <input type="email" [(ngModel)]="email" name="email" placeholder="Email" required #emailInput="ngModel">
+        </label>
+      </div>
+
+      <div class="custom-input">
+        <label>
+          <img src="assets/images/Security Shield.png" alt="Password Icon" class="icon">
+          <input [type]="passwordType" [(ngModel)]="password" name="password" placeholder="Password" required #passwordInput="ngModel">
+          <ion-icon [name]="eyeIcon" slot="end" (click)="togglePasswordVisibility()"></ion-icon>
+        </label>
+      </div>
+
+
+      <div class="forgot-password">
+        <a (click)="navigateToForgotPassword()">Forgot Password?</a>
+      </div>
+      <button class="custom-button" type="submit" [disabled]="!signInForm.valid || isLoading">
+        <span class="button-text">
+          Sign In
+          <ion-spinner *ngIf="isLoading" class="spinner"></ion-spinner>
+        </span>
+      </button>
+    </form>
+  </div>
+</ion-content>

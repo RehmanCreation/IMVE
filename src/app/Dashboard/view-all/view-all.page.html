@@ -1,0 +1,92 @@
+<ion-toolbar>
+  <ion-grid>
+    <ion-row class="ion-align-items-center">
+      <ion-col size="auto">
+        <ion-avatar>
+          <img src="assets/images/Ellipse 16.png" alt="Profile Picture">
+        </ion-avatar>
+      </ion-col>
+      <ion-col>
+        <ion-text>
+          <h2>Juli Isabella</h2>
+          <p>Admin</p>
+        </ion-text>
+      </ion-col>
+      <ion-col size="auto" class="ion-text-right">
+        <ion-button fill="clear">
+          <ion-icon slot="icon-only" src="assets/icon/Bell.svg"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-toolbar>
+
+
+<ion-content>
+  <div class="fixed-header">
+    <ion-grid>
+      <ion-row class="ion-align-items-center">
+        <ion-col size="auto">
+          <h1>Task Management</h1>
+        </ion-col>
+        <ion-col class="ion-text-right">
+          <button class="btn btn-primary btn-view-all" (click)="addClicked()">
+            <ion-icon slot="icon-only"src="assets/icon/bx-plus.svg" class="btn-icon"></ion-icon> Add Task
+          </button>
+        
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" size-md="8" offset-md="2" *ngFor="let task of tasks">
+        <div class="custom-card">
+          <div class="custom-content">
+            <ion-checkbox class="custom-checkbox" [(ngModel)]="task.isChecked" (ionChange)="onCheckboxChange(task)"></ion-checkbox>
+            <div class="content-text" [ngClass]="{ 'checked': task.isChecked }">
+              <h2>{{ task.title }}</h2>
+              <p>{{ task.assignee }}</p>
+            </div>
+            <div class="custom-time-date">
+              <p>{{ task.time }}</p>
+              <p>{{ task.date }}</p>
+            </div>
+          </div>
+          <ion-icon src="assets/icon/x.svg" class="delete-icon"></ion-icon>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+
+<ion-footer class="footer-custom">
+  <ion-toolbar class="footer-toolbar">
+    <ion-grid>
+      <ion-row class="ion-align-items-center ion-justify-content-between">
+        <ion-col size="2" class="ion-text-center" (click)="goHome()">
+          <ion-icon src="assets/icon/bx-home.svg"></ion-icon>
+          <p>Home</p>
+        </ion-col>
+        <ion-col size="2" class="ion-text-center" (click)="goClient()">
+          <ion-icon src="assets/icon/users-group.svg"></ion-icon>
+          <p>Client</p>
+        </ion-col>
+        <ion-col size="2" class="ion-text-center">
+          <ion-icon src="assets/icon/calendar 2.svg"></ion-icon>
+          <p>Calendar</p>
+        </ion-col>
+        <ion-col size="2" class="ion-text-center">
+          <ion-icon src="assets/icon/credit-card.svg"></ion-icon>
+          <p>Payment</p>
+        </ion-col>
+        <ion-col size="2" class="ion-text-center">
+          <ion-icon src="assets/icon/bx-user-circle.svg"></ion-icon>
+          <p>Profile</p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-footer>
